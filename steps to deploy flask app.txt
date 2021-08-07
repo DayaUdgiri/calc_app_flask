@@ -1,0 +1,53 @@
+https://github.com/Avnish327030/flask_demo_tesing
+
+To deploy a flask app on heroku.
+
+1. Create account on herko and github
+2. Download and install git and heroku cli in your pc
+
+https://cli-assets.heroku.com/heroku-x64.exe
+https://git-scm.com/download/win
+
+1> Create env in conda
+
+To create env, open anconda command prompt and run below commands (or create new env while creatinng a project in Pycharm)
+
+conda create -n flask_app_demo python==3.7
+conda activate flask_app_demo
+
+
+Now in Pycharm, select interpreter in pycharm project.
+
+For this new project/env, use run below commands in pycharm terminal
+pip install flask
+pip install gunicorn (used for heroku to understand this web app)
+pip freeze>requirements.txt
+
+Create a empty "Procfile" by right-click on project, new file, give name Procfile and enter. Then write below and save
+web: gunicorn main:app
+
+------link github repo
+
+Create a new repository in github. You will get list of commands after creation of repository
+
+git config --global user.email "<git registered mail id>"
+git config --global user.name "<git user name>"
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin <git hub url for your repo>
+git push -u origin main
+
+execute below command from pycharm terminal
+heroku login -i
+enter username and password of heroku
+
+create an app in Heroku from heroku web portal
+
+then come to pycharm terminal and execute below command
+heroku git:remote -a <app name in heroku>
+
+git push heroku main  --> this will push the code from git to heroku. It will give you the URL for the app.
+
+You can browse that URL or click on "Open App" button in Heroku
