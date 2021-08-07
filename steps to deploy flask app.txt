@@ -1,6 +1,6 @@
-https://github.com/Avnish327030/flask_demo_tesing
-
-FLow: Build app in Pycharm --> upload it to Github -->create app in heroku--> push github code to heroku app
+Original doc at -->https://github.com/Avnish327030/flask_demo_tesing as part of training
+I(Daya) have modified for better understanding and flow.
+Flow: Build app in Pycharm --> upload it to Github -->create app in heroku--> push github code to heroku app
 
 To deploy a flask app on heroku.
 
